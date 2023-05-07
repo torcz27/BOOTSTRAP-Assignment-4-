@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background-image: url(bootstrap-la-gi-tai-sao-nen-dung-bootstrap-1024x576.jpg);
+  background-size: cover;
+}
+
+.him{
+    display: inline-block;
+    background: red;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: #4aff03;
+    padding: 5px 5px;
+    
+    box-sizing: border-box;
+    text-decoration: none;
+    color:#0404f8;
+    box-shadow: 0 15px 25px rgb(186, 253, 253);
+    width: auto;
+
+
+}
+#her{
+   display: inline-block;
+ background-color: red;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: #4aff03;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color:#060606;
+    box-shadow: 0 15px 25px rgb(186, 253, 253);
+    width: fit-content;
+  max-width: 700px;
+  margin: auto;
+   
+ 
+
+
+
+}
+.container
+{
+    margin: 0 40px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.container h1
+{
+    color:black;
+}
+.container .tab
+{
+    position: relative;
+    background: rgb(250, 48, 3);
+    padding: 0 20px 20px;
+    box-shadow: 0 15px 25px rgb(186, 253, 253);
+    border-radius:  5px;
+    overflow: hidden;
+    border-style: solid;
+    border-color: #4aff03;
+}
+.container .tab input
+{
+    appearance: none;
+}
+.container .tab label
+{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.container .tab label::after
+{
+    content: "+";
+    position: absolute;
+    right: 20px;
+    font-size: 2em;
+    color:rgb(15, 15, 16);
+    transition: transform 1s;
+}
+.container .tab:hover label::after
+{
+    color:blue;
+}
+.container .tab input:checked ~ label::after
+{
+transform: rotate(135deg);
+color: aliceblue;
+}
+.container .tab label h2
+{
+    width: 40px;
+    height: 40px;
+    background: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(7, 7, 7);
+    font-size: 1.25em;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.container .tab input:checked ~ label h2
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: rgba(14, 13, 13, 0.2);
+    font-size: 8em;
+    justify-content: flex-end;
+    padding: 20px;
+}
+.container .tab:nth-child(2) label h2
+{
+    background: linear-gradient(135deg, #f58b70, #3528c6);
+}
+.container .tab:nth-child(3) label h2
+{
+    background: linear-gradient(135deg, rgb(255, 251, 0), rgb(0, 255, 255));
+}
+.container .tab:nth-child(4) label h2
+{
+    background: linear-gradient(135deg, #e370f5, #f8dfdf);
+}
+.container .tab:nth-child(5) label h2
+{
+    background: linear-gradient(135deg, #03eaff, #9ec628);
+}
+.container .tab label h3
+{
+    position: relative;
+    font-weight: 500;
+    color: pink;
+    z-index: 10;
+}
+.container .tab input:checked ~ label h3
+{
+    background: #fff;
+    padding: 2px 10px;
+    color: #333;
+    border-radius: 2px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.container .tab .content
+{
+   max-height: 0;
+   transition: 1s;
+   overflow: hidden; 
+}
+.container .tab input:checked ~ .content
+{
+    max-height: 100vh;
+
+}
+.container .tab .content p
+{
+    position: relative;
+    padding: 10px 0;
+    color: #333;
+    z-index: 10;
+}
+.container .tab input:checked ~ .content p
+{
+    color: #020202;
+}
+
+
